@@ -1,0 +1,42 @@
+.jumbotron {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-bottom: 0;
+  border-radius: 0;
+  background-color: #fff;
+  background: url('https://i.pinimg.com/originals/26/7e/3c/267e3c321dde8affc6fa558f702caed2.jpg');
+}
+
+.navbar-toggler {
+  border: 2px solid transparent;
+}
+
+.block-1 {
+  background-color: #eae7e4;
+}
+
+.block-1 .card{
+  min-height: 360px;
+  text-align: center;
+}
+
+.block-4 {
+  background: linear-gradient(to left, #363b41, #212529);
+  color: #fff;
+}
+
+.owl-nav {
+  display: none;
+}
+
+.owl-carousel {
+  display: block !important;
+}
+
+.owl-dots {
+  margin-top: 1rem;
+}
+
+.mvh-100 {
+  min-height:100vh;
+}
