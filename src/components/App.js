@@ -1,13 +1,22 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import '../styles/bootstrap.css';
-import '../styles/Custom.css';
 import '../img/pavlov.png';
 import '../img/job-1.jpg';
 import '../img/job-2.jpg';
 import '../img/job-3.jpg';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel';
+import { faHome } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faMobileAlt } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import 'bootstrap/js/dist/util';
+import 'bootstrap/js/dist/dropdown';
+import { Manager, Reference, Popper } from 'react-popper';
+import 'bootstrap';
+import '../styles/Custom.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './owl.carousel.custom.js';
 
 function BasicExample() {
   return (
@@ -16,14 +25,17 @@ function BasicExample() {
         <header>
           <div class="navbar navbar-dark bg-dark shadow-sm">
             <div class="container d-flex justify-content-between">
-              <nav class="navbar navbar-expand-lg">
-                <Link class="navbar-brand" to="/">Главная</Link>
+              <nav class="navbar navbar-expand-lg w-100">
+                <Link class="navbar-brand" to="/"><FontAwesomeIcon className ='mr-2' icon={faHome} />Главная</Link>
+				<button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
                       <Link class="nav-link" to="/skills">Навыки</Link>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                       <Link class="nav-link" to="/experience">Опыт работы</Link>
                     </li>
                   </ul>
@@ -32,6 +44,7 @@ function BasicExample() {
             </div>
           </div>
         </header>
+		
 
         <Route exact path="/" component={Home} />
         <Route path="/skills" component={Skills} />
@@ -63,8 +76,8 @@ function Home() {
       <p class="lead">Но желание из веб-мастера перерасти в более узконаправлению профессию Frontend-разработчик сейчас во мне борется очень активно</p>
       <p class="lead m-3">От чего и появилась этот мини-сайт :)</p>
       <p>
-        <a href="tel:8-937-410-00-03" class="btn btn-primary m-2"><i class="fas fa-mobile-alt mr-2"></i>8-937-410-00-03</a>
-        <a href="mailto:pavlovav90@gmail.com" class="btn btn-secondary m-2"><i class="far fa-envelope mr-2"></i>pavlovav90@gmail.com</a>
+        <a href="tel:8-937-410-00-03" class="btn btn-primary m-2"><FontAwesomeIcon className ='mr-2' icon={faMobileAlt} />8-937-410-00-03</a>
+        <a href="mailto:pavlovav90@gmail.com" class="btn btn-secondary m-2"><FontAwesomeIcon className ='mr-2' icon={faEnvelope} />pavlovav90@gmail.com</a>
       </p>
     </div>
   </section>
